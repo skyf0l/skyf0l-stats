@@ -1,8 +1,8 @@
 ### Programming and cybersecurity enthusiast
 
-Currently playing VS Code: [![CodeTime badge](https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Fapi.codetime.dev%2Fshield%3Fid%3D4291%26project%3D%26in%3D31536000000)](https://codetime.dev)
+My cat's name is `:(){:|:&};:`, you should type his name on your linux's terminal.
 
-Find me on:
+Currently playing VS Code: [![CodeTime badge](https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Fapi.codetime.dev%2Fshield%3Fid%3D4291%26project%3D%26in%3D31536000000)](https://codetime.dev)
 
 - [CodinGame](https://www.codingame.com/profile/15e936698224022d7f672e70c884b7489242353): Ranked <%= cg.ranking %>, top <%= cg.globalRank %>%
 - [HackTheBox](https://app.hackthebox.com/profile/444974): Ranked <%= htb.ranking %> as <%= htb.rank %> with <%= htb.rank_ownership %>% of content pwned
