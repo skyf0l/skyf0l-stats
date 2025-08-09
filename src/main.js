@@ -37,7 +37,7 @@ async function get_rootme_stats() {
 }
 
 async function get_hackthebox_stats() {
-    const res = await fetch("https://www.hackthebox.com/api/v4/profile/444974", {
+    const res = await fetch("https://labs.hackthebox.com/api/v4/user/profile/basic/444974", {
         headers: {
             Authorization: `Bearer ${process.env.HTB_TOKEN}`,
         },
