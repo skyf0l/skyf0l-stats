@@ -1,7 +1,5 @@
 ### Cybersecurity and programming enthusiast
 
-My cat's name is `:(){:|:&};:`, you should type his name on your linux's terminal.
-
 - [Root-Me](https://www.root-me.org/skyf0l): Ranked <%= rootme.ranking %> with <%= rootme.score %> points
 - [HackTheBox](https://app.hackthebox.com/profile/444974): Ranked <%= htb.ranking %> as <%= htb.rank %> with <%= htb.rank_ownership %>% of content pwned
 - [CodinGame](https://www.codingame.com/profile/15e936698224022d7f672e70c884b7489242353): Ranked <%= cg.ranking %>, top <%= cg.globalRank %>%
