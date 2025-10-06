@@ -5,6 +5,10 @@ import { resolve, dirname } from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 async function get_rootme_stats() {
     const res = await fetch("https://api.www.root-me.org/auteurs/256088", {
         headers: {
@@ -14,8 +18,8 @@ async function get_rootme_stats() {
     const profile = await res.json();
 
     return {
-        score: profile.score,
-        ranking: profile.position,
+        score: formatNumber(profile.score),
+        ranking: formatNumber(profile.position),
         rank: profile.rang,
     };
 }
@@ -29,7 +33,7 @@ async function get_hackthebox_stats() {
     const profile = await res.json();
 
     return {
-        ranking: profile.profile.ranking,
+        ranking: formatNumber(profile.profile.ranking),
         rank: profile.profile.rank,
         rank_ownership: profile.profile.rank_ownership,
     };
@@ -49,7 +53,7 @@ async function get_codingame_stats() {
     const profile = await res.json();
 
     return {
-        ranking: profile.globalPointsRankGlobal,
+        ranking: formatNumber(profile.globalPointsRankGlobal),
         globalRank:
             Math.ceil((profile.globalPointsRankGlobal / profile.totalCodingamerGlobal.global) * 1000) / 10,
     };
