@@ -5,11 +5,6 @@ import { resolve, dirname } from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// https://stackoverflow.com/a/13627586
-function nth(i) {
-    return i.toString();
-}
-
 async function get_rootme_stats() {
     const res = await fetch("https://api.www.root-me.org/auteurs/256088", {
         headers: {
@@ -20,7 +15,7 @@ async function get_rootme_stats() {
 
     return {
         score: profile.score,
-        ranking: nth(profile.position),
+        ranking: profile.position,
         rank: profile.rang,
     };
 }
@@ -34,7 +29,7 @@ async function get_hackthebox_stats() {
     const profile = await res.json();
 
     return {
-        ranking: nth(profile.profile.ranking),
+        ranking: profile.profile.ranking,
         rank: profile.profile.rank,
         rank_ownership: profile.profile.rank_ownership,
     };
@@ -54,7 +49,7 @@ async function get_codingame_stats() {
     const profile = await res.json();
 
     return {
-        ranking: nth(profile.globalPointsRankGlobal),
+        ranking: profile.globalPointsRankGlobal,
         globalRank:
             Math.ceil((profile.globalPointsRankGlobal / profile.totalCodingamerGlobal.global) * 1000) / 10,
     };
