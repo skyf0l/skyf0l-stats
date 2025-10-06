@@ -5,20 +5,8 @@ import { resolve, dirname } from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// https://stackoverflow.com/a/13627586
-function nth(i) {
-    let j = i % 10,
-        k = i % 100;
-    if (j === 1 && k !== 11) {
-        return i + "st";
-    }
-    if (j === 2 && k !== 12) {
-        return i + "nd";
-    }
-    if (j === 3 && k !== 13) {
-        return i + "rd";
-    }
-    return i + "th";
+function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 async function get_rootme_stats() {
@@ -30,8 +18,8 @@ async function get_rootme_stats() {
     const profile = await res.json();
 
     return {
-        score: profile.score,
-        ranking: nth(profile.position),
+        score: formatNumber(profile.score),
+        ranking: formatNumber(profile.position),
         rank: profile.rang,
     };
 }
@@ -45,7 +33,7 @@ async function get_hackthebox_stats() {
     const profile = await res.json();
 
     return {
-        ranking: nth(profile.profile.ranking),
+        ranking: formatNumber(profile.profile.ranking),
         rank: profile.profile.rank,
         rank_ownership: profile.profile.rank_ownership,
     };
@@ -65,7 +53,7 @@ async function get_codingame_stats() {
     const profile = await res.json();
 
     return {
-        ranking: nth(profile.globalPointsRankGlobal),
+        ranking: formatNumber(profile.globalPointsRankGlobal),
         globalRank:
             Math.ceil((profile.globalPointsRankGlobal / profile.totalCodingamerGlobal.global) * 1000) / 10,
     };
