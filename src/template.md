@@ -1,4 +1,4 @@
-### DevSecOps & AppSec enthusiast
+### DevSecOps, AppSec & Programming Enthusiast
 
 Rust security tooling ([@RsaCracker](https://github.com/skyf0l/RsaCracker)), [Exegol](https://github.com/ThePorgs/Exegol) believer & occasional contributor
 
