@@ -1,6 +1,6 @@
 ### DevSecOps, AppSec & Programming Enthusiast
 
-Rust security tooling ([@RsaCracker](https://github.com/skyf0l/RsaCracker)), [Exegol](https://github.com/ThePorgs/Exegol) believer & occasional contributor
+Rust security tooling ([@RsaCracker](https://github.com/skyf0l/RsaCracker)), [Exegol](https://github.com/ThePorgs/Exegol) believer & contributor
 
 CTFs & coding: [Root-Me](https://www.root-me.org/skyf0l) <%= rootme.score %> pts (#<%= rootme.ranking %>) - [HackTheBox](https://app.hackthebox.com/profile/444974) #<%= htb.ranking %> (<%= htb.rank %>) - [CodinGame](https://www.codingame.com/profile/15e936698224022d7f672e70c884b7489242353) top <%= cg.globalRank %>%.
 
